@@ -1,6 +1,7 @@
 import { message } from 'antd'
 import React, { createContext, useState, useEffect } from 'react'
 import { ConfigProvider, theme, ThemeConfig } from 'antd'
+import { BAND_COLORS } from '@/constants'
 
 interface ThemeProviderProps {
     children: React.ReactNode
@@ -38,7 +39,7 @@ function ThemeProvider({ children }: ThemeProviderProps) {
 
     const themeConfig: ThemeConfig = {
         token: {
-            colorPrimary: '#fd0a0a',
+            colorPrimary: BAND_COLORS || '#1890ff',
             borderRadius: 8,
             fontFamily: 'Noto Sans Mono ,Noto Sans Thai, sans-serif',
         },
